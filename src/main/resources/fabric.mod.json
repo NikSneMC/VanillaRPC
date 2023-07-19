@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "id": "vanillarpc",
+  "version": "${version}",
+  "name": "Vanilla RPC",
+  "description": "Vanilla Discord RPC for modded Minecraft",
+  "authors": [
+    "NikSne"
+  ],
+  "contact": {
+    "repo": "https://github.com/NikSneMC/VanillaRPC"
+  },
+  "license": "All-Rights-Reserved",
+  "icon": "assets/vanillarpc/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "com.niksne.vanillarpc.VanillaRPC"
+    ]
+  },
+  "depends": {
+    "fabricloader": "*",
+    "minecraft": ">=${minecraft_version}"
+  },
+  "breaks": {
+    "simple-rpc": "*",
+    "red_discord_presence": "*",
+    "craftpresence":  "*",
+    "simplystatus": "*",
+    "sdrp": "*",
+    "basicdiscordrichpresence": "*",
+    "rederevodiscordrichpresence": "*",
+    "bbmcord": "*",
+    "yarpc": "*"
+  },
+  "custom": {
+    "modmenu": {
+      "links": {
+        "github": "https://github.com/NikSneMC/VanillaRPC",
+        "modrinth": "https://modrinth.com/mod/vanilla-rpc",
+        "discord": "https://discord.com/invite/hGxQgrYTD3"
+      }
+    }
+  }
+}
