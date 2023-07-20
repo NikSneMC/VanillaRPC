@@ -20,7 +20,7 @@
   },
   "depends": {
     "fabricloader": "*",
-    "minecraft": ">=${minecraft_version}"
+    "minecraft": ">=1.14"
   },
   "breaks": {
     "simple-rpc": "*",
