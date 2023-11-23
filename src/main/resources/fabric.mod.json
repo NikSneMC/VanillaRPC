@@ -34,7 +34,9 @@
     "basicdiscordrichpresence": "*",
     "rederevodiscordrichpresence": "*",
     "bbmcord": "*",
-    "yarpc": "*"
+    "yarpc": "*",
+    "fabripresence": "*",
+    "essential": "*"
   },
   "custom": {
     "modmenu": {
