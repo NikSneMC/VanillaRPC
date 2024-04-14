@@ -8,17 +8,17 @@
     "NikSne"
   ],
   "contact": {
-    "email": "niksne.mc@yandex.ru",
+    "email": "contact@niksne.ru",
     "sources": "https://github.com/NikSneMC/VanillaRPC",
     "issues": "https://github.com/NikSneMC/VanillaRPC/issues",
-    "homepage": "http://niksne.sytes.net"
+    "homepage": "https://niksne.ru"
   },
   "license": "All-Rights-Reserved",
   "icon": "assets/vanillarpc/icon.png",
   "environment": "client",
   "entrypoints": {
     "client": [
-      "com.niksne.vanillarpc.VanillaRPC"
+      "ru.niksne.vanillarpc.VanillaRPC"
     ]
   },
   "depends": {
