@@ -19,7 +19,8 @@ public class VanillaRPC implements ClientModInitializer {
             id = s.hasNext() ? s.next() : "";
         } catch (IOException e) {
             e.printStackTrace();
-            id = "1131048770109460500";
+            id = "1131048770109460500"; // new logo
+            // id = "1157515441816748062"; // Old logo
         }
         DiscordRPC lib = DiscordRPC.INSTANCE;
         lib.Discord_Initialize(id, new DiscordEventHandlers(), true, "");
