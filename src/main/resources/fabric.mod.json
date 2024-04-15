@@ -25,8 +25,13 @@
     "fabricloader": "*",
     "minecraft": ">=1.14"
   },
+  "recommends": {
+    "modmenu": "*"
+  },
   "breaks": {
+    "wirichpresence": "*",
     "simple-rpc": "*",
+    "simplerpc": "*",
     "red_discord_presence": "*",
     "craftpresence":  "*",
     "simplystatus": "*",
@@ -36,7 +41,10 @@
     "bbmcord": "*",
     "yarpc": "*",
     "fabripresence": "*",
-    "essential": "*"
+    "essential": "*",
+    "phases-discord-rich-presence": "*",
+    "ipccraft": "*",
+    "presencium": "*"
   },
   "custom": {
     "modmenu": {
