@@ -1,6 +1,8 @@
 {pkgs ? import <nixpkgs> {}}: let
+  jdk = pkgs.zulu8;
+
   packages = with pkgs; [
-    zulu8
+    jdk
   ];
 
   libraries = with pkgs; [
@@ -27,4 +29,6 @@ in
 
       DIRENV_LOG_FORMAT = "";
       LD_LIBRARY_PATH = "${lib.makeLibraryPath libraries}:$LD_LIBRARY_PATH";
+
+      JAVA_HOME = "${jdk}";
     }
