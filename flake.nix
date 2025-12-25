@@ -1,37 +1,14 @@
 {
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-    flake-parts.url = "github:hercules-ci/flake-parts";
-    systems.url = "github:nix-systems/default";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
+    flake-utils.url = "github:numtide/flake-utils";
   };
-
   outputs = inputs:
-    inputs.flake-parts.lib.mkFlake { inherit inputs; } {
-      systems = import inputs.systems;
-      perSystem = { config, self', pkgs, lib, system, ... }:
-        let
-          deps = with pkgs; [
-            libxkbcommon
-            libiconv
-            libGL
-
-            stdenv.cc.cc.lib
-
-            # WINIT_UNIX_BACKEND=wayland
-            wayland
-
-            # WINIT_UNIX_BACKEND=x11
-            xorg.libXcursor
-            xorg.libXrandr
-            xorg.libXi
-            xorg.libX11
-          ];
-        in
-        {
-          devShells.default = pkgs.mkShell {
-            buildInputs = deps;
-            LD_LIBRARY_PATH = "${lib.makeLibraryPath deps}";
-          };
-        };
-    };
+    inputs.flake-utils.lib.eachDefaultSystem (system: let
+      pkgs = import inputs.nixpkgs {
+        inherit system;
+      };
+    in {
+      devShell = import ./shell.nix {inherit pkgs;};
+    });
 }

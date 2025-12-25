@@ -6,3 +6,5 @@ build/
 /shelf/
 /workspace.xml
 desktop.ini
+
+.direnv
